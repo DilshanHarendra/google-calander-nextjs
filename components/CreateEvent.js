@@ -8,7 +8,7 @@ const moment = require('moment')
 import DatePicker from "react-datepicker";
 import axios from "axios";
 
-function CreateEvent(){
+function CreateEvent(props){
     const formikRef = useRef();
     const [startDateTime, setStartDateTime] = useState(new Date());
     const [endSateTime, setEndDateTime] = useState(new Date());
@@ -16,8 +16,8 @@ function CreateEvent(){
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
     const initialValues= {
-        summary:'summary ',
-        description:' description',
+        summary:'',
+        description:'',
         startDateTime:'',
         endDateTime:'',
 
@@ -72,11 +72,11 @@ function CreateEvent(){
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             }
-        }).then(res=>{
-            console.log(res.data)
+        }).then(()=>{
             setSuccess('Event Created')
             setLoading(false)
             restForm()
+            props.fetch()
             setTimeout(()=>setSuccess(''),5000)
         }).catch(err=>{
             setSuccess('Event Can not Create')
@@ -179,7 +179,7 @@ function CreateEvent(){
                                 ></animateTransform>
                             </circle>
                         </svg>}
-                        Submit
+                        Create
                     </button>
                 </Form>
             )}
