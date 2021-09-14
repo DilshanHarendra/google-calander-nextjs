@@ -13,25 +13,9 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      primary:'var(--o2o-primary)',
-      "header-dark":'#1B1E24',
-      "header-light":'var(--o2o-header)',
-      "body-dark":'#23272B',
-      "body-light":'var(--o2o-body)',
-      "sidebar-dark":'#1B1E24',
-      "sidebar-light":'var(--o2o-sidebar)',
-      "title-text":'var(--o2o-title)',
-      "title-secondary-text":'var(--o2o-title-secondary)',
-      "paragraph-text":'var(--o2o-paragraph)',
-      "links-text":'var(--o2o-links)',
-
-      textsecondary:'#A3A3A3',
-
-
 
       transparent: 'transparent',
       current: 'currentColor',
-
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
